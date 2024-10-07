@@ -34,8 +34,8 @@ div +p{
 
 .div{
     background-color: aquamarine;
-    height: 500px;
-    width: 500px;
+    height: 800px;
+    width: 800px;
     border: 2px solid black;
     display: flex;
     align-items: center;
@@ -46,14 +46,17 @@ div +p{
 .child1,.child2,.child3{
     /* display: inline; */
     background-color: rgb(255, 127, 127);
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 208px;
     border: 2px solid rebeccapurple;
 
 }
 .child1
 {
 background-color: aqua;
+display: flex;
+justify-content: space-evenly;
+
 }.child2
 {
     background-color: rgb(0, 255, 38);
@@ -61,3 +64,14 @@ background-color: aqua;
 {
 background-color: brown;
 }
+
+.child11{
+    border: 2px solid red;
+    background-color: blue;
+}
+.child12{
+    border: 2px solid rgb(70, 27, 170);
+    background-color: chartreuse;
+}
+
+
