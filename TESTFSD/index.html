@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MERN Stack Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="heading">Online Quiz</h3>
+      <div class="main-container">
+        <div class="main">
+          <p class="question">What is capital of France?</p>
+          <label
+            ><input type="radio" name="capital" class="option" value="paris" />
+            <span>Paris</span></label
+          ><br />
+          <label
+            ><input type="radio" name="capital" class="option" value="lyon" />
+            <span>Lyon</span></label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="capital"
+              class="option"
+              value="marseille"
+            />
+            <span>Marseille</span></label
+          ><br />
+          <label
+            ><input type="radio" name="capital" class="option" value="nantes" />
+            <span>Nantes</span></label
+          ><br />
+        </div>
+        <div class="btn-section">
+          <button class="btn1">Previous</button>
+          <button class="btn2">Next</button>
+          <button class="btn-submit" style="display: none">Submit</button>
+        </div>
+
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          question: "What is capital of France?",
+          options: ["Paris", "Lyon", "Marseille", "Nantes"],
+          answer: "Paris",
+        },
+        {
+          question: 'Which planet is known as the "Red Planet"?',
+          options: ["Earth", "Mars", "Jupiter", "Saturn"],
+          answer: "Mars",
+        },
+        {
+          question: "What is the largest ocean on Earth?",
+          options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+          answer: "Pacific",
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+      const container = document.querySelector(".main-container");
+      const questionEl = document.querySelector(".question");
+      const options = document.querySelectorAll(".option");
+      const btn1 = document.querySelector(".btn1");
+      const btn2 = document.querySelector(".btn2");
+      const btnSubmit = document.querySelector(".btn-submit");
+      const result = document.querySelector(".result");
+
+      const renderQuestion = () => {
+        const currentQuestionData = questions[currentQuestion];
+        questionEl.textContent = currentQuestionData.question;
+        options.forEach((option, index) => {
+          option.value = currentQuestionData.options[index];
+          option.nextElementSibling.textContent =
+            currentQuestionData.options[index];
+          option.checked = false;
+        });
+      };
+
+      const checkAnswer = () => {
+        const selectedOption = Array.from(options).find(
+          (option) => option.checked
+        );
+        if (
+          selectedOption &&
+          selectedOption.value === questions[currentQuestion].answer
+        ) {
+          score++;
+        }
+      };
+
+      const nextQuestion = () => {
+        checkAnswer();
+        currentQuestion++;
+        if (currentQuestion === questions.length) {
+          btn1.style.display = "inline-block";
+          btn2.style.display = "inline-block";
+          btnSubmit.style.display = "inline-block";
+        } else {
+          renderQuestion();
+        }
+      };
+
+      const previousQuestion = () => {
+        currentQuestion--;
+        if (currentQuestion < 0) {
+          currentQuestion = 0;
+        } else {
+          renderQuestion();
+        }
+      };
+
+      const showResult = () => {
+        let sc = score;
+        let total = questions.length;
+        let percentage = (score / total) * 100;
+
+        if (score / total >= 0.7) {
+          document.querySelector(
+            ".result"
+          ).innerHTML = `Your Score ${percentage.toFixed(2)}%`;
+        } else {
+          document.querySelector(
+            ".result"
+          ).innerHTML = `Your Score ${percentage.toFixed(2)}%`;
+        }
+      };
+
+      btn1.addEventListener("click", previousQuestion);
+      btn2.addEventListener("click", nextQuestion);
+      btnSubmit.addEventListener("click", showResult);
+
+      renderQuestion();
+    </script>
+  </body>
+</html>
