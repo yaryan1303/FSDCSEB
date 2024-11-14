@@ -1,4 +1,4 @@
 const Heading = () => {
-  return <h1>Student Information</h1>;
+  return <h4>ABES ENGINEERING COLLEGE</h4>;
 };
 export default Heading;

@@ -1,11 +1,9 @@
+import styles from "./Student.module.css";
 function Student({ student }) {
   return (
-    <div>
+    <div className={styles.text}>
       <table>
         <tbody>
-          <tr>
-            <td colSpan={2}>ABES ENGINERRING COLLEGE</td>
-          </tr>
           <tr>
             <td>Name:</td>
             <td>{student.name}</td>
