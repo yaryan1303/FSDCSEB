@@ -5,6 +5,8 @@ import MainHeading from "./Components/MainHeading";
 import profileimg from "./assets/img/profileimg.jpg";
 import profileimg1 from "./assets/img/profileimg1.jpg";
 import "./Index.css";
+import State1 from "./Components/State1";
+import ImageManipulation from "./Components/ImageManipulation";
 
 function App() {
   const students = [
@@ -41,7 +43,9 @@ function App() {
     <>
       <MainHeading />
       <div className="App">
-        {students.map((student, index) => (
+        {/* <State1></State1> */}
+        <ImageManipulation/>
+        {/* {students.map((student, index) => (
           <div className="container" key={index}>
             <center>
               <Heading />
@@ -50,7 +54,7 @@ function App() {
               <Student student={student} />
             </center>
           </div>
-        ))}
+        ))} */}
       </div>
     </>
   );
