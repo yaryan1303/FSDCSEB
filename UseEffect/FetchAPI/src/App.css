@@ -1,0 +1,59 @@
+/* App.css */
+.container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.recipe-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-item h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-item img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.recipe-item p {
+  color: #555;
+  margin: 5px 0;
+}
+
+.recipe-item strong {
+  color: #111;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+}

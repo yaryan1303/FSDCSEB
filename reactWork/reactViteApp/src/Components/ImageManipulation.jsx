@@ -9,6 +9,7 @@ function ImageManipulation() {
     width: "200px",
     borderColor: "blue",
     transform: "rotate(0deg)",
+    backgroundColor: "green",
   });
 
   const changeImage = () => {
@@ -17,6 +18,7 @@ function ImageManipulation() {
       width: "300px",
       borderColor: "green",
       transform: "rotate(180deg)",
+      backgroundColor: "green",
     });
   };
 
@@ -26,6 +28,7 @@ function ImageManipulation() {
       width: "250px",
       borderColor: "blue",
       transform: "rotate(90deg)",
+      backgroundColor: "green",
     });
   };
 
@@ -40,6 +43,7 @@ function ImageManipulation() {
           border: `2px solid ${style.borderColor}`,
           transition: "all 0.3s ease",
           transform: style.transform,
+          backgroundColor: style.backgroundColor,
         }}
       />
       <button onClick={changeImage} className={styles.btn}>

@@ -44,7 +44,9 @@ function App() {
       <MainHeading />
       <div className="App">
         {/* <State1></State1> */}
-        <ImageManipulation/>
+        <div className="container1">
+          <ImageManipulation />
+        </div>
         {/* {students.map((student, index) => (
           <div className="container" key={index}>
             <center>
