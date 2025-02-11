@@ -7,40 +7,55 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h3 class="heading">Online Quiz</h3>
-      <div class="main-container">
-        <div class="main">
-          <p class="question">What is capital of France?</p>
+    <div className="container">
+      <h3 className="heading">Online Quiz</h3>
+      <div className="main-container">
+        <div className="main">
+          <p className="question">What is capital of France?</p>
           <label
-            ><input type="radio" name="capital" class="option" value="paris" />
+            ><input
+              type="radio"
+              name="capital"
+              className="option"
+              value="paris"
+            />
             <span>Paris</span></label
           ><br />
           <label
-            ><input type="radio" name="capital" class="option" value="lyon" />
+            ><input
+              type="radio"
+              name="capital"
+              className="option"
+              value="lyon"
+            />
             <span>Lyon</span></label
           ><br />
           <label
             ><input
               type="radio"
               name="capital"
-              class="option"
+              className="option"
               value="marseille"
             />
             <span>Marseille</span></label
           ><br />
           <label
-            ><input type="radio" name="capital" class="option" value="nantes" />
+            ><input
+              type="radio"
+              name="capital"
+              className="option"
+              value="nantes"
+            />
             <span>Nantes</span></label
           ><br />
         </div>
-        <div class="btn-section">
-          <button class="btn1">Previous</button>
-          <button class="btn2">Next</button>
-          <button class="btn-submit" style="display: none">Submit</button>
+        <div className="btn-section">
+          <button className="btn1">Previous</button>
+          <button className="btn2">Next</button>
+          <button className="btn-submit" style="display: none">Submit</button>
         </div>
 
-        <div class="result"></div>
+        <div className="result"></div>
       </div>
     </div>
 
@@ -76,7 +91,7 @@
       const renderQuestion = () => {
         const currentQuestionData = questions[currentQuestion];
         questionEl.textContent = currentQuestionData.question;
-        options.forEach((option, index) => {
+        options.htmlForEach((option, index) => {
           option.value = currentQuestionData.options[index];
           option.nextElementSibling.textContent =
             currentQuestionData.options[index];

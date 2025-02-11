@@ -8,7 +8,7 @@ function ImageManipulation() {
   const [style, setStyle] = useState({
     width: "200px",
     borderColor: "blue",
-    transform: "rotate(0deg)",
+    transhtmlForm: "rotate(0deg)",
     backgroundColor: "green",
   });
 
@@ -17,7 +17,7 @@ function ImageManipulation() {
     setStyle({
       width: "300px",
       borderColor: "green",
-      transform: "rotate(180deg)",
+      transhtmlForm: "rotate(180deg)",
       backgroundColor: "green",
     });
   };
@@ -27,7 +27,7 @@ function ImageManipulation() {
     setStyle({
       width: "250px",
       borderColor: "blue",
-      transform: "rotate(90deg)",
+      transhtmlForm: "rotate(90deg)",
       backgroundColor: "green",
     });
   };
@@ -42,7 +42,7 @@ function ImageManipulation() {
           width: style.width,
           border: `2px solid ${style.borderColor}`,
           transition: "all 0.3s ease",
-          transform: style.transform,
+          transhtmlForm: style.transhtmlForm,
           backgroundColor: style.backgroundColor,
         }}
       />

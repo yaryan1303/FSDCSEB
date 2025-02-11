@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import DataFetch from "./DataFetch";
-import "../App.css";
+import "./App.css";
 
 const FetchAPI = () => {
   const [recipes, setRecipes] = useState([]); // State htmlFor all recipes
